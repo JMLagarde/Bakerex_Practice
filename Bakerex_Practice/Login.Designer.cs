@@ -41,8 +41,10 @@
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.lblRegister = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cbxExit = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -60,7 +62,7 @@
             // 
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
             this.txtEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtEmail.DefaultText = "";
             this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -79,7 +81,7 @@
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(300, 44);
             this.txtEmail.TabIndex = 1;
-            this.txtEmail.TextOffset = new System.Drawing.Point(50, 0);
+            this.txtEmail.TextOffset = new System.Drawing.Point(70, 0);
             // 
             // guna2HtmlLabel1
             // 
@@ -171,6 +173,7 @@
             this.txtSignup.Size = new System.Drawing.Size(43, 21);
             this.txtSignup.TabIndex = 7;
             this.txtSignup.Text = "Sign Up";
+            this.txtSignup.Click += new System.EventHandler(this.txtSignup_Click);
             // 
             // btnLogin
             // 
@@ -212,17 +215,17 @@
             this.cbxExit.Size = new System.Drawing.Size(19, 19);
             this.cbxExit.TabIndex = 10;
             // 
-            // lblEmail
+            // lblUsername
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
-            this.lblEmail.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(82, 196);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(44, 19);
-            this.lblEmail.TabIndex = 11;
-            this.lblEmail.Text = "Email: ";
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.lblUsername.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ForeColor = System.Drawing.Color.White;
+            this.lblUsername.Location = new System.Drawing.Point(82, 196);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(67, 19);
+            this.lblUsername.TabIndex = 11;
+            this.lblUsername.Text = "Username:";
             // 
             // lblPassword
             // 
@@ -236,6 +239,19 @@
             this.lblPassword.TabIndex = 12;
             this.lblPassword.Text = "Password:";
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::Bakerex_Practice.Properties.Resources.AdminIcon;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 13;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,8 +259,9 @@
             this.BackgroundImage = global::Bakerex_Practice.Properties.Resources.Login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(671, 438);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.cbxExit);
             this.Controls.Add(this.lblRegister);
             this.Controls.Add(this.btnLogin);
@@ -262,6 +279,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,8 +299,9 @@
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblRegister;
         private Guna.UI2.WinForms.Guna2ControlBox cbxExit;
-        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblPassword;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
 

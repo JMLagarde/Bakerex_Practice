@@ -10,20 +10,15 @@ using System.Windows.Forms;
 
 namespace Bakerex_Practice
 {
-    public partial class Login : Form
+    public partial class AdminLogin : Form
     {
         private Color originalEmailLabelColor;
         private Color originalPasswordLabelColor;
-        public Login()
+        public AdminLogin()
         {
             InitializeComponent();
-        }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-            guna2ShadowForm1.SetShadowForm(this);
-
-            originalEmailLabelColor = lblUsername.BackColor;
+            originalEmailLabelColor = lblEmail.BackColor;
             originalPasswordLabelColor = lblPassword.BackColor;
 
             txtEmail.MouseEnter += TxtEmail_MouseEnter;
@@ -37,20 +32,20 @@ namespace Bakerex_Practice
 
         private void TxtEmail_MouseEnter(object sender, EventArgs e)
         {
-            lblUsername.BackColor = Color.Gray;
+            lblEmail.BackColor = Color.Gray;
         }
 
         private void TxtEmail_MouseLeave(object sender, EventArgs e)
         {
             if (!txtEmail.Focused)
             {
-                lblUsername.BackColor = originalEmailLabelColor; 
+                lblEmail.BackColor = originalEmailLabelColor;
             }
         }
 
         private void TxtEmail_Leave(object sender, EventArgs e)
         {
-            lblUsername.BackColor = originalEmailLabelColor;
+            lblEmail.BackColor = originalEmailLabelColor;
         }
 
         private void TxtPassword_MouseEnter(object sender, EventArgs e)
@@ -62,13 +57,13 @@ namespace Bakerex_Practice
         {
             if (!txtPassword.Focused)
             {
-                lblPassword.BackColor = originalPasswordLabelColor; 
+                lblPassword.BackColor = originalPasswordLabelColor;
             }
         }
 
         private void TxtPassword_Leave(object sender, EventArgs e)
         {
-            lblPassword.BackColor = originalPasswordLabelColor; 
+            lblPassword.BackColor = originalPasswordLabelColor;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -79,20 +74,17 @@ namespace Bakerex_Practice
             this.Hide();
         }
 
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        private void txtSignup_Click(object sender, EventArgs e)
         {
-            AdminLogin AdminLoginForm = new AdminLogin();
-            AdminLoginForm.Show();
+            AdminRegister adminRegister = new AdminRegister();
+            adminRegister.Show();
 
             this.Hide();
         }
 
-        private void txtSignup_Click(object sender, EventArgs e)
+        private void AdminLogin_Load(object sender, EventArgs e)
         {
-            Login LoginForm = new Login();
-            LoginForm.Show();
 
-            this.Hide();
         }
     }
 }

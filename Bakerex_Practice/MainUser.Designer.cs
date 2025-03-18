@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbxExit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.lblTrackTicket = new System.Windows.Forms.Label();
             this.lblSubmitTicket = new System.Windows.Forms.Label();
             this.lblHome = new System.Windows.Forms.Label();
@@ -39,6 +40,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnSubmitTicket = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -47,6 +51,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.cbxExit);
             this.guna2Panel1.Controls.Add(this.lblTrackTicket);
             this.guna2Panel1.Controls.Add(this.lblSubmitTicket);
             this.guna2Panel1.Controls.Add(this.lblHome);
@@ -57,6 +62,18 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(843, 58);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // cbxExit
+            // 
+            this.cbxExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxExit.BackColor = System.Drawing.Color.Transparent;
+            this.cbxExit.BorderRadius = 1;
+            this.cbxExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.cbxExit.IconColor = System.Drawing.Color.White;
+            this.cbxExit.Location = new System.Drawing.Point(821, 3);
+            this.cbxExit.Name = "cbxExit";
+            this.cbxExit.Size = new System.Drawing.Size(19, 19);
+            this.cbxExit.TabIndex = 11;
             // 
             // lblTrackTicket
             // 
@@ -186,12 +203,47 @@
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label4.Location = new System.Drawing.Point(48, 269);
+            this.label4.MaximumSize = new System.Drawing.Size(320, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(292, 0);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Your one-stop solution  for all your service requests and ticket submissions";
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label5.Location = new System.Drawing.Point(48, 271);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(285, 50);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Your one-stop solution for your service requests and ticket submissions";
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label6.Location = new System.Drawing.Point(48, 378);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(285, 23);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Get your issues resolved quickly and efficiently";
+            // 
             // MainUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Bakerex_Practice.Properties.Resources.UserBackground__2_;
             this.ClientSize = new System.Drawing.Size(843, 551);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnSubmitTicket);
             this.Controls.Add(this.label3);
@@ -224,5 +276,9 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Button btnSubmitTicket;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2ControlBox cbxExit;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

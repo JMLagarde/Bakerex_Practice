@@ -63,6 +63,16 @@ namespace Bakerex_Practice.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AdminIcon {
+            get {
+                object obj = ResourceManager.GetObject("AdminIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bakerex_logo {
             get {
                 object obj = ResourceManager.GetObject("Bakerex_logo", resourceCulture);
