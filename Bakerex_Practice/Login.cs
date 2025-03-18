@@ -73,8 +73,8 @@ namespace Bakerex_Practice
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            MainDashboard mainDashboardForm = new MainDashboard();
-            mainDashboardForm.Show();
+            MainUser mainUserForm = new MainUser();
+            mainUserForm.Show();
 
             this.Hide();
         }
